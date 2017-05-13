@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSbuild</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="default.css" type="text/css"/>
+  </head>
+  <body>
+    <div id="container">
+    <div class="pageTitle">
+      <h2>JSbuild在线代码编辑</h2>
+    </div>
+    <div id="pageHtml"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;/html&gt;
+      </pre>
+    </div>
+    <div id="pageCss"><pre>body{
+margin: 0;
+padding: 0;
+}<pre>
+    </div>
+    <div id="pageJs"><pre>window.onload = function(){
+
+};</pre>
+    </div>
+    <div class="pageResult">
+      <iframe></iframe>
+    </div>
+  </div>
+  <script type="text/javascript" src="src-noconflict/ace.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var editorHtml = ace.edit("pageHtml");
+    editorHtml.setTheme("ace/theme/twilight");
+    editorHtml.session.setMode("ace/mode/html");
+    var editorCss = ace.edit("pageCss");
+    editorCss.setTheme("ace/theme/twilight");
+    editorCss.session.setMode("ace/mode/css");
+    var editorJs = ace.edit("pageJs");
+    editorJs.setTheme("ace/theme/twilight");
+    editorJs.session.setMode("ace/mode/javascript")
+  </script>
+  </body>
+</html>
